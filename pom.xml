@@ -15,10 +15,17 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jfx.version>24-ea+19</jfx.version>
-    <jfx-graphics.version>24-internal+0-2025-01-20-190918</jfx-graphics.version>
+    <jfx.version>21</jfx.version>
+    <jfx-graphics.version>21</jfx-graphics.version>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>openuri-fix-repo</id>
+      <name>OpenURI Fix Repo</name>
+      <url>file://${project.basedir}/repository</url>
+    </repository>
+  </repositories>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
