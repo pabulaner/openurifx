@@ -13,12 +13,15 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.awt.Desktop;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.CountDownLatch;
 
 public class OpenUriFxApp extends Application {
 
-    private static boolean receivedUri = false;
+    private static int receivedUri = 0;
 
     private static Timer timer = new Timer();
 
@@ -31,7 +34,7 @@ public class OpenUriFxApp extends Application {
     public static void registerJDKOpenUriHandler() {
         Desktop.getDesktop().setOpenURIHandler(e -> {
             Platform.runLater(() -> {
-                receivedUri = true;
+                receivedUri += 1;
                 addMessage("Received: " + e.getURI());
             });
         });
@@ -77,7 +80,17 @@ public class OpenUriFxApp extends Application {
 
             @Override
             public void run() {
-                Platform.runLater(() -> addMessage(receivedUri
+                try {
+
+                    FileWriter writer = new FileWriter("/tmp/openurifx-output.txt");
+                    writer.write(String.valueOf(receivedUri));
+                    writer.flush();
+                    writer.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+                Platform.runLater(() -> addMessage(receivedUri == 1
                         ? "Successful!"
                         : "Failure!"));
             }
