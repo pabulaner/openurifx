@@ -17,6 +17,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.FileHandler;
@@ -49,6 +50,17 @@ public class OpenUriFxApp extends Application {
         } catch (IOException e) {
             LOGGER.severe(e.getMessage());
         }
+
+        if (order == null) {
+            addMessage("No order specified. Taking default");
+            order = "swing-first";
+        }
+
+        if (order.startsWith("swing-first")) {
+            addMessage("Initializing Swing first");
+            registerJDKOpenUriHandler();
+        }
+
         launch(args);
     }
 
@@ -69,16 +81,6 @@ public class OpenUriFxApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        if (order == null) {
-            addMessage("No order specified. Taking default");
-            order = "swing-first";
-        }
-
-        if (order.startsWith("swing-first")) {
-            addMessage("Initializing Swing first");
-            registerJDKOpenUriHandler();
-        }
-
         MenuBar menuBar = new MenuBar();
 
         Menu menu1 = new Menu("Menu 12");
