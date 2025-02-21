@@ -2,6 +2,8 @@
 
 # fixed version
 fixedVersion=21-internal+0-2025-02-04-102810
+# time to wait for results
+waitTime=12
 
 # functions
 function check_result {
@@ -19,12 +21,13 @@ function install_app {
   # install faulty version
   #
 
+  pkill OpenUriFxApp
+
   # build dmg
   # echo "Building and installing faulty version (this may take some time)..."
   mvn clean install jpackage:jpackage -Djfx-graphics.version=21 > /dev/null
 
   # install dmg
-  pkill OpenUriFxApp
   hdiutil attach ./target/dist/OpenUriFxApp-1.0.dmg > /dev/null
   sudo cp -R /Volumes/OpenUriFxApp/OpenUriFxApp.app /Applications
   hdiutil unmount /Volumes/OpenUriFxApp > /dev/null
@@ -32,7 +35,8 @@ function install_app {
   # open app
   open /Applications/OpenUriFxApp.app
 
-  sleep 8
+  sleep $waitTime
+  pkill OpenUriFxApp
 
   echo ""
   echo "Faulty version result:"
@@ -47,7 +51,6 @@ function install_app {
   mvn clean install jpackage:jpackage -Djfx-graphics.version=$fixedVersion > /dev/null
 
   # install dmg
-  pkill OpenUriFxApp
   hdiutil attach ./target/dist/OpenUriFxApp-1.0.dmg > /dev/null
   sudo cp -R /Volumes/OpenUriFxApp/OpenUriFxApp.app /Applications
   hdiutil unmount /Volumes/OpenUriFxApp > /dev/null
@@ -55,7 +58,8 @@ function install_app {
   # open app
   open /Applications/OpenUriFxApp.app
 
-  sleep 8
+  sleep $waitTime
+  pkill OpenUriFxApp
 
   echo ""
   echo "Fixed version result:"
@@ -81,5 +85,3 @@ install_app
 
 echo ""
 echo "Finished!"
-
-pkill OpenUriFxApp

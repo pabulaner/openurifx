@@ -126,7 +126,7 @@ public class OpenUriFxApp extends Application {
             public void run() {
                 try {
                     String value = "uri-receive-count: " + receivedUri + ", native-menu-bar: " + (menuBar.getHeight() == 0);
-                    LOGGER.info(value);
+                    LOGGER.info("uri count: " + receivedUri + ", menu height: " + menuBar.getHeight());
                     FileWriter writer = new FileWriter("/tmp/openurifx-output.txt");
                     writer.write(value);
                     writer.flush();
@@ -135,10 +135,10 @@ public class OpenUriFxApp extends Application {
                     throw new RuntimeException(e);
                 }
 
-                Platform.runLater(() -> addMessage(receivedUri == 1
+                Platform.runLater(() -> addMessage(receivedUri == 1 && menuBar.getHeight() == 0
                         ? "Successful!"
                         : "Failure!"));
             }
-        }, 3000);
+        }, 4000);
     }
 }
