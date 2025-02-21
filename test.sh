@@ -6,13 +6,12 @@ fixedVersion=21-internal+0-2025-02-04-102810
 # functions
 function check_result {
   result=$(cat "/tmp/openurifx-output.txt")
-  if [[ $result == "1" ]]; then
+  if [[ $result == "uri-receive-count: 1, native-menu-bar: true" ]]; then
     echo Success
   else
     echo Failure
+    echo "Expected: [uri-receive-count: 1, native-menu-bar: true], Actual: [$result]"
   fi
-
-  echo "(Expected: 1, Actual: $result)"
 }
 
 function install_app {
@@ -21,7 +20,7 @@ function install_app {
   #
 
   # build dmg
-  echo "Building and installing faulty version (this may take some time)..."
+  # echo "Building and installing faulty version (this may take some time)..."
   mvn clean install jpackage:jpackage -Djfx-graphics.version=21 > /dev/null
 
   # install dmg
@@ -33,9 +32,9 @@ function install_app {
   # open app
   open /Applications/OpenUriFxApp.app
 
-  echo "Waiting 10 seconds for execution of faulty version..."
-  sleep 10
+  sleep 8
 
+  echo ""
   echo "Faulty version result:"
   check_result
 
@@ -44,7 +43,7 @@ function install_app {
   #
 
   # build dmg
-  echo "Building and installing fixed version (this may take some time)..."
+  # echo "Building and installing fixed version (this may take some time)..."
   mvn clean install jpackage:jpackage -Djfx-graphics.version=$fixedVersion > /dev/null
 
   # install dmg
@@ -56,19 +55,31 @@ function install_app {
   # open app
   open /Applications/OpenUriFxApp.app
 
-  echo "Waiting 10 seconds for execution of fixed version..."
-  sleep 10
+  sleep 8
 
+  echo ""
   echo "Fixed version result:"
   check_result
 }
 
+echo "Running test, this may take some time..."
+
 echo "swing-first" > /tmp/openurifx-order.txt
+echo ""
 echo "Testing with initializing swing first"
 install_app
 
-echo "swing-last" > /tmp/openurifx-order.txt
-echo "Testing with initializing swing last"
+echo "before-show" > /tmp/openurifx-order.txt
+echo ""
+echo "Testing with initializing swing before show"
 install_app
+
+echo "after-show" > /tmp/openurifx-order.txt
+echo ""
+echo "Testing with initializing swing after show"
+install_app
+
+echo ""
+echo "Finished!"
 
 pkill OpenUriFxApp

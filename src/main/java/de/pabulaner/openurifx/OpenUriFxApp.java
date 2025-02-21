@@ -29,7 +29,7 @@ public class OpenUriFxApp extends Application {
 
     static {
         try {
-            LOGGER.addHandler(new FileHandler("/tmp/openurifx.log"));
+            LOGGER.addHandler(new FileHandler("/tmp/openurifx-" + System.currentTimeMillis() + ".log"));
         } catch (IOException e) {
             LOGGER.severe(e.getMessage());
         }
@@ -81,6 +81,11 @@ public class OpenUriFxApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        if (order.startsWith("before-show")) {
+            addMessage("Initializing Swing before show");
+            registerJDKOpenUriHandler();
+        }
+
         MenuBar menuBar = new MenuBar();
 
         Menu menu1 = new Menu("Menu 12");
@@ -108,8 +113,8 @@ public class OpenUriFxApp extends Application {
         stage.setTitle("JavaFX says hello");
         stage.show();
 
-        if (order.startsWith("swing-last")) {
-            addMessage("Initializing Swing last");
+        if (order.startsWith("after-show")) {
+            addMessage("Initializing Swing after show");
             registerJDKOpenUriHandler();
         }
 
@@ -120,8 +125,10 @@ public class OpenUriFxApp extends Application {
             @Override
             public void run() {
                 try {
+                    String value = "uri-receive-count: " + receivedUri + ", native-menu-bar: " + (menuBar.getHeight() == 0);
+                    LOGGER.info(value);
                     FileWriter writer = new FileWriter("/tmp/openurifx-output.txt");
-                    writer.write(String.valueOf(receivedUri));
+                    writer.write(value);
                     writer.flush();
                     writer.close();
                 } catch (IOException e) {
