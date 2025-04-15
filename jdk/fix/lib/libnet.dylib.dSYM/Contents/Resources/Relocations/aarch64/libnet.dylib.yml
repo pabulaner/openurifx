@@ -1,0 +1,150 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/paul/Workspace/Java/jdk/build/macosx-aarch64-server-release/support/modules_libs/java.base/libnet.dylib'
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _Java_sun_net_spi_DefaultProxySelector_init, symObjAddr: 0x0, symBinAddr: 0x9A8, symSize: 0x1C }
+  - { offset: 0xF0, size: 0x8, addend: 0x0, symName: _Java_sun_net_spi_DefaultProxySelector_init, symObjAddr: 0x0, symBinAddr: 0x9A8, symSize: 0x1C }
+  - { offset: 0x2AFB, size: 0x8, addend: 0x0, symName: _Java_sun_net_spi_DefaultProxySelector_getSystemProxies, symObjAddr: 0x1C, symBinAddr: 0x9C4, symSize: 0x56C }
+  - { offset: 0x35FF, size: 0x8, addend: 0x0, symName: _proxyUrlCallback, symObjAddr: 0x588, symBinAddr: 0xF30, symSize: 0x38 }
+  - { offset: 0x36CA, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet4Address_init, symObjAddr: 0x0, symBinAddr: 0xF68, symSize: 0x98 }
+  - { offset: 0x36F1, size: 0x8, addend: 0x0, symName: _ia4_class, symBinAddr: 0xC280, symSize: 0x0 }
+  - { offset: 0x3726, size: 0x8, addend: 0x0, symName: _ia4_ctrID, symBinAddr: 0xC288, symSize: 0x0 }
+  - { offset: 0x3750, size: 0x8, addend: 0x0, symName: _ia4_initialized, symObjAddr: 0x4AA0, symBinAddr: 0xC238, symSize: 0x0 }
+  - { offset: 0x3794, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet4Address_init, symObjAddr: 0x0, symBinAddr: 0xF68, symSize: 0x98 }
+  - { offset: 0x602A, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet4AddressImpl_getLocalHostName, symObjAddr: 0x0, symBinAddr: 0x1000, symSize: 0x98 }
+  - { offset: 0x64B4, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet4AddressImpl_getLocalHostName, symObjAddr: 0x0, symBinAddr: 0x1000, symSize: 0x98 }
+  - { offset: 0x6561, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet4AddressImpl_lookupAllHostAddr, symObjAddr: 0x98, symBinAddr: 0x1098, symSize: 0x2E4 }
+  - { offset: 0x9219, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet4AddressImpl_getHostByAddr, symObjAddr: 0x37C, symBinAddr: 0x137C, symSize: 0xF8 }
+  - { offset: 0x9671, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet4AddressImpl_isReachable0, symObjAddr: 0x474, symBinAddr: 0x1474, symSize: 0x584 }
+  - { offset: 0x9F55, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet6Address_init, symObjAddr: 0x0, symBinAddr: 0x19F8, symSize: 0x1B0 }
+  - { offset: 0x9F7C, size: 0x8, addend: 0x0, symName: _ia6_class, symBinAddr: 0xC290, symSize: 0x0 }
+  - { offset: 0x9FB1, size: 0x8, addend: 0x0, symName: _ia6_holder6ID, symBinAddr: 0xC2A0, symSize: 0x0 }
+  - { offset: 0x9FDB, size: 0x8, addend: 0x0, symName: _ia6_ipaddressID, symBinAddr: 0xC2A8, symSize: 0x0 }
+  - { offset: 0x9FF0, size: 0x8, addend: 0x0, symName: _ia6_scopeidID, symBinAddr: 0xC2B0, symSize: 0x0 }
+  - { offset: 0xA005, size: 0x8, addend: 0x0, symName: _ia6_scopeidsetID, symBinAddr: 0xC2B8, symSize: 0x0 }
+  - { offset: 0xA01A, size: 0x8, addend: 0x0, symName: _ia6_scopeifnameID, symBinAddr: 0xC2C0, symSize: 0x0 }
+  - { offset: 0xA02F, size: 0x8, addend: 0x0, symName: _ia6_ctrID, symBinAddr: 0xC298, symSize: 0x0 }
+  - { offset: 0xA059, size: 0x8, addend: 0x0, symName: _ia6_initialized, symObjAddr: 0x505C, symBinAddr: 0xC23C, symSize: 0x0 }
+  - { offset: 0xA09D, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet6Address_init, symObjAddr: 0x0, symBinAddr: 0x19F8, symSize: 0x1B0 }
+  - { offset: 0xC9B1, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet6AddressImpl_getLocalHostName, symObjAddr: 0x0, symBinAddr: 0x1BA8, symSize: 0x98 }
+  - { offset: 0xCD58, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet6AddressImpl_getLocalHostName, symObjAddr: 0x0, symBinAddr: 0x1BA8, symSize: 0x98 }
+  - { offset: 0xCE05, size: 0x8, addend: 0x0, symName: _lookupIfLocalhost, symObjAddr: 0x98, symBinAddr: 0x1C40, symSize: 0x320 }
+  - { offset: 0xFA34, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet6AddressImpl_lookupAllHostAddr, symObjAddr: 0x3B8, symBinAddr: 0x1F60, symSize: 0x568 }
+  - { offset: 0x10086, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet6AddressImpl_getHostByAddr, symObjAddr: 0x920, symBinAddr: 0x24C8, symSize: 0x154 }
+  - { offset: 0x10434, size: 0x8, addend: 0x0, symName: _Java_java_net_Inet6AddressImpl_isReachable0, symObjAddr: 0xA74, symBinAddr: 0x261C, symSize: 0x5A8 }
+  - { offset: 0x10D0D, size: 0x8, addend: 0x0, symName: _Java_java_net_InetAddress_init, symObjAddr: 0x0, symBinAddr: 0x2BC4, symSize: 0x19C }
+  - { offset: 0x10D34, size: 0x8, addend: 0x0, symName: _ia_class, symBinAddr: 0xC2C8, symSize: 0x0 }
+  - { offset: 0x10D69, size: 0x8, addend: 0x0, symName: _iac_class, symBinAddr: 0xC2E0, symSize: 0x0 }
+  - { offset: 0x10D7E, size: 0x8, addend: 0x0, symName: _ia_holderID, symBinAddr: 0xC2D0, symSize: 0x0 }
+  - { offset: 0x10DA8, size: 0x8, addend: 0x0, symName: _iac_addressID, symBinAddr: 0xC2D8, symSize: 0x0 }
+  - { offset: 0x10DBD, size: 0x8, addend: 0x0, symName: _iac_familyID, symBinAddr: 0xC2E8, symSize: 0x0 }
+  - { offset: 0x10DD2, size: 0x8, addend: 0x0, symName: _iac_hostNameID, symBinAddr: 0xC2F0, symSize: 0x0 }
+  - { offset: 0x10DE7, size: 0x8, addend: 0x0, symName: _iac_origHostNameID, symBinAddr: 0xC2F8, symSize: 0x0 }
+  - { offset: 0x10DFC, size: 0x8, addend: 0x0, symName: _ia_initialized, symObjAddr: 0x5210, symBinAddr: 0xC240, symSize: 0x0 }
+  - { offset: 0x10E40, size: 0x8, addend: 0x0, symName: _Java_java_net_InetAddress_init, symObjAddr: 0x0, symBinAddr: 0x2BC4, symSize: 0x19C }
+  - { offset: 0x10F2C, size: 0x8, addend: 0x0, symName: _Java_java_net_InetAddress_isIPv4Available, symObjAddr: 0x19C, symBinAddr: 0x2D60, symSize: 0x18 }
+  - { offset: 0x10F64, size: 0x8, addend: 0x0, symName: _Java_java_net_InetAddress_isIPv6Supported, symObjAddr: 0x1B4, symBinAddr: 0x2D78, symSize: 0x18 }
+  - { offset: 0x137B2, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_init, symObjAddr: 0x0, symBinAddr: 0x2D90, symSize: 0x318 }
+  - { offset: 0x137F1, size: 0x8, addend: 0x0, symName: _ni_class, symBinAddr: 0xC318, symSize: 0x0 }
+  - { offset: 0x13826, size: 0x8, addend: 0x0, symName: _ni_nameID, symBinAddr: 0xC338, symSize: 0x0 }
+  - { offset: 0x13850, size: 0x8, addend: 0x0, symName: _ni_indexID, symBinAddr: 0xC330, symSize: 0x0 }
+  - { offset: 0x13865, size: 0x8, addend: 0x0, symName: _ni_descID, symBinAddr: 0xC328, symSize: 0x0 }
+  - { offset: 0x1387A, size: 0x8, addend: 0x0, symName: _ni_addrsID, symBinAddr: 0xC300, symSize: 0x0 }
+  - { offset: 0x1388F, size: 0x8, addend: 0x0, symName: _ni_bindsID, symBinAddr: 0xC308, symSize: 0x0 }
+  - { offset: 0x138A4, size: 0x8, addend: 0x0, symName: _ni_virutalID, symBinAddr: 0xC348, symSize: 0x0 }
+  - { offset: 0x138B9, size: 0x8, addend: 0x0, symName: _ni_childsID, symBinAddr: 0xC310, symSize: 0x0 }
+  - { offset: 0x138CE, size: 0x8, addend: 0x0, symName: _ni_parentID, symBinAddr: 0xC340, symSize: 0x0 }
+  - { offset: 0x138E3, size: 0x8, addend: 0x0, symName: _ni_ctrID, symBinAddr: 0xC320, symSize: 0x0 }
+  - { offset: 0x1390D, size: 0x8, addend: 0x0, symName: _ni_ibcls, symObjAddr: 0x10AD0, symBinAddr: 0xC248, symSize: 0x0 }
+  - { offset: 0x13922, size: 0x8, addend: 0x0, symName: _ni_ibctrID, symObjAddr: 0x10AD8, symBinAddr: 0xC250, symSize: 0x0 }
+  - { offset: 0x13937, size: 0x8, addend: 0x0, symName: _ni_ibaddressID, symObjAddr: 0x10AE0, symBinAddr: 0xC258, symSize: 0x0 }
+  - { offset: 0x1394C, size: 0x8, addend: 0x0, symName: _ni_ib4broadcastID, symObjAddr: 0x10AE8, symBinAddr: 0xC260, symSize: 0x0 }
+  - { offset: 0x13961, size: 0x8, addend: 0x0, symName: _ni_ib4maskID, symObjAddr: 0x10AF0, symBinAddr: 0xC268, symSize: 0x0 }
+  - { offset: 0x13CD8, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_init, symObjAddr: 0x0, symBinAddr: 0x2D90, symSize: 0x318 }
+  - { offset: 0x16603, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_getByName0, symObjAddr: 0x318, symBinAddr: 0x30A8, symSize: 0x198 }
+  - { offset: 0x16804, size: 0x8, addend: 0x0, symName: _enumInterfaces, symObjAddr: 0x4B0, symBinAddr: 0x3240, symSize: 0x158 }
+  - { offset: 0x16A65, size: 0x8, addend: 0x0, symName: _createNetworkInterface, symObjAddr: 0x608, symBinAddr: 0x3398, symSize: 0x620 }
+  - { offset: 0x17042, size: 0x8, addend: 0x0, symName: _freeif, symObjAddr: 0xC28, symBinAddr: 0x39B8, symSize: 0x60 }
+  - { offset: 0x17129, size: 0x8, addend: 0x0, symName: _enumIPv4Interfaces, symObjAddr: 0xF40, symBinAddr: 0x3CD0, symSize: 0x148 }
+  - { offset: 0x1729E, size: 0x8, addend: 0x0, symName: _enumIPv6Interfaces, symObjAddr: 0x12B8, symBinAddr: 0x4048, symSize: 0x438 }
+  - { offset: 0x1748F, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_getByIndex0, symObjAddr: 0xC88, symBinAddr: 0x3A18, symSize: 0x7C }
+  - { offset: 0x175EF, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_boundInetAddress0, symObjAddr: 0xD04, symBinAddr: 0x3A94, symSize: 0x23C }
+  - { offset: 0x17931, size: 0x8, addend: 0x0, symName: _find_bound_interface, symObjAddr: 0x1088, symBinAddr: 0x3E18, symSize: 0x230 }
+  - { offset: 0x17AE2, size: 0x8, addend: 0x0, symName: _addif, symObjAddr: 0x1EE8, symBinAddr: 0x4C78, symSize: 0x31C }
+  - { offset: 0x17E54, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_getByInetAddress0, symObjAddr: 0x16F0, symBinAddr: 0x4480, symSize: 0xB8 }
+  - { offset: 0x17F6F, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_getAll, symObjAddr: 0x17A8, symBinAddr: 0x4538, symSize: 0xF0 }
+  - { offset: 0x180B4, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_isUp0, symObjAddr: 0x1898, symBinAddr: 0x4628, symSize: 0x24 }
+  - { offset: 0x1813B, size: 0x8, addend: 0x0, symName: _getFlags0, symObjAddr: 0x18BC, symBinAddr: 0x464C, symSize: 0x1C8 }
+  - { offset: 0x185AE, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_isP2P0, symObjAddr: 0x1A84, symBinAddr: 0x4814, symSize: 0x1C }
+  - { offset: 0x18635, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_isLoopback0, symObjAddr: 0x1AA0, symBinAddr: 0x4830, symSize: 0x1C }
+  - { offset: 0x186BC, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_supportsMulticast0, symObjAddr: 0x1ABC, symBinAddr: 0x484C, symSize: 0x1C }
+  - { offset: 0x18743, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_getMacAddr0, symObjAddr: 0x1AD8, symBinAddr: 0x4868, symSize: 0x170 }
+  - { offset: 0x1891C, size: 0x8, addend: 0x0, symName: _getMacAddress, symObjAddr: 0x1C48, symBinAddr: 0x49D8, symSize: 0xC0 }
+  - { offset: 0x18A56, size: 0x8, addend: 0x0, symName: _Java_java_net_NetworkInterface_getMTU0, symObjAddr: 0x1D08, symBinAddr: 0x4A98, symSize: 0x1E0 }
+  - { offset: 0x18CE6, size: 0x8, addend: 0x0, symName: _Java_sun_net_dns_ResolverConfigurationImpl_fallbackDomain0, symObjAddr: 0x0, symBinAddr: 0x4F94, symSize: 0x90 }
+  - { offset: 0x18D40, size: 0x8, addend: 0x0, symName: _Java_sun_net_dns_ResolverConfigurationImpl_fallbackDomain0, symObjAddr: 0x0, symBinAddr: 0x4F94, symSize: 0x90 }
+  - { offset: 0x1B69A, size: 0x8, addend: 0x0, symName: _Java_sun_net_sdp_SdpSupport_create0, symObjAddr: 0x0, symBinAddr: 0x5024, symSize: 0x3C }
+  - { offset: 0x1DF31, size: 0x8, addend: 0x0, symName: _Java_sun_net_sdp_SdpSupport_create0, symObjAddr: 0x0, symBinAddr: 0x5024, symSize: 0x3C }
+  - { offset: 0x1DFD0, size: 0x8, addend: 0x0, symName: _Java_sun_net_sdp_SdpSupport_convert0, symObjAddr: 0x3C, symBinAddr: 0x5060, symSize: 0x34 }
+  - { offset: 0x1E082, size: 0x8, addend: 0x0, symName: _ipv4_available, symObjAddr: 0x0, symBinAddr: 0x5094, symSize: 0xC }
+  - { offset: 0x1E0A9, size: 0x8, addend: 0x0, symName: _IPv4_available, symObjAddr: 0xAA34, symBinAddr: 0xC270, symSize: 0x0 }
+  - { offset: 0x1E0C5, size: 0x8, addend: 0x0, symName: _IPv6_available, symObjAddr: 0xAA38, symBinAddr: 0xC274, symSize: 0x0 }
+  - { offset: 0x1E0DA, size: 0x8, addend: 0x0, symName: _REUSEPORT_available, symObjAddr: 0xAA3C, symBinAddr: 0xC278, symSize: 0x0 }
+  - { offset: 0x1E0EF, size: 0x8, addend: 0x0, symName: _initialized, symObjAddr: 0xAA40, symBinAddr: 0xC27C, symSize: 0x0 }
+  - { offset: 0x1E19C, size: 0x8, addend: 0x0, symName: _ipv4_available, symObjAddr: 0x0, symBinAddr: 0x5094, symSize: 0xC }
+  - { offset: 0x1E1B5, size: 0x8, addend: 0x0, symName: _ipv6_available, symObjAddr: 0xC, symBinAddr: 0x50A0, symSize: 0xC }
+  - { offset: 0x1E1CE, size: 0x8, addend: 0x0, symName: _reuseport_available, symObjAddr: 0x18, symBinAddr: 0x50AC, symSize: 0xC }
+  - { offset: 0x1E1E7, size: 0x8, addend: 0x0, symName: _JNI_OnLoad, symObjAddr: 0x24, symBinAddr: 0x50B8, symSize: 0x124 }
+  - { offset: 0x1E2E1, size: 0x8, addend: 0x0, symName: _initInetAddressIDs, symObjAddr: 0x148, symBinAddr: 0x51DC, symSize: 0x8C }
+  - { offset: 0x20B82, size: 0x8, addend: 0x0, symName: _setInet6Address_scopeifname, symObjAddr: 0x1D4, symBinAddr: 0x5268, symSize: 0x84 }
+  - { offset: 0x20C28, size: 0x8, addend: 0x0, symName: _getInet6Address_scopeid, symObjAddr: 0x258, symBinAddr: 0x52EC, symSize: 0x80 }
+  - { offset: 0x20CAA, size: 0x8, addend: 0x0, symName: _setInet6Address_scopeid, symObjAddr: 0x2D8, symBinAddr: 0x536C, symSize: 0xB0 }
+  - { offset: 0x20D4F, size: 0x8, addend: 0x0, symName: _getInet6Address_ipaddress, symObjAddr: 0x388, symBinAddr: 0x541C, symSize: 0xBC }
+  - { offset: 0x20E1A, size: 0x8, addend: 0x0, symName: _setInet6Address_ipaddress, symObjAddr: 0x444, symBinAddr: 0x54D8, symSize: 0xFC }
+  - { offset: 0x20F1A, size: 0x8, addend: 0x0, symName: _setInetAddress_addr, symObjAddr: 0x540, symBinAddr: 0x55D4, symSize: 0x98 }
+  - { offset: 0x20FB4, size: 0x8, addend: 0x0, symName: _setInetAddress_family, symObjAddr: 0x5D8, symBinAddr: 0x566C, symSize: 0x98 }
+  - { offset: 0x2103C, size: 0x8, addend: 0x0, symName: _setInetAddress_hostName, symObjAddr: 0x670, symBinAddr: 0x5704, symSize: 0xBC }
+  - { offset: 0x210FC, size: 0x8, addend: 0x0, symName: _getInetAddress_addr, symObjAddr: 0x72C, symBinAddr: 0x57C0, symSize: 0x98 }
+  - { offset: 0x21192, size: 0x8, addend: 0x0, symName: _getInetAddress_family, symObjAddr: 0x7C4, symBinAddr: 0x5858, symSize: 0x98 }
+  - { offset: 0x2130F, size: 0x8, addend: 0x0, symName: _NET_SockaddrToInetAddress, symObjAddr: 0x85C, symBinAddr: 0x58F0, symSize: 0x4CC }
+  - { offset: 0x2196F, size: 0x8, addend: 0x0, symName: _NET_SockaddrEqualsInetAddress, symObjAddr: 0xD28, symBinAddr: 0x5DBC, symSize: 0x378 }
+  - { offset: 0x21DB9, size: 0x8, addend: 0x0, symName: _NET_GetPortFromSockaddr, symObjAddr: 0x10A0, symBinAddr: 0x6134, symSize: 0x10 }
+  - { offset: 0x21DE4, size: 0x8, addend: 0x0, symName: _in_cksum, symObjAddr: 0x10B0, symBinAddr: 0x6144, symSize: 0x110 }
+  - { offset: 0x21E5F, size: 0x8, addend: 0x0, symName: _lookupCharacteristicsToAddressFamily, symObjAddr: 0x11C0, symBinAddr: 0x6254, symSize: 0x20 }
+  - { offset: 0x21EAA, size: 0x8, addend: 0x0, symName: _addressesInSystemOrder, symObjAddr: 0x11E0, symBinAddr: 0x6274, symSize: 0xC }
+  - { offset: 0x220D4, size: 0x8, addend: 0x0, symName: _NET_PlatformInit, symObjAddr: 0x0, symBinAddr: 0x6280, symSize: 0x8 }
+  - { offset: 0x220FB, size: 0x8, addend: 0x0, symName: _NET_SetSockOpt, symObjAddr: 0x828, symBinAddr: 0x6AA8, symSize: 0x1D4 }
+  - { offset: 0x22122, size: 0x8, addend: 0x0, symName: _NET_SetSockOpt.maxsockbuf, symObjAddr: 0xBC8, symBinAddr: 0xC230, symSize: 0x0 }
+  - { offset: 0x2233E, size: 0x8, addend: 0x0, symName: _NET_PlatformInit, symObjAddr: 0x0, symBinAddr: 0x6280, symSize: 0x8 }
+  - { offset: 0x22357, size: 0x8, addend: 0x0, symName: _NET_ThrowByNameWithLastError, symObjAddr: 0x8, symBinAddr: 0x6288, symSize: 0x4 }
+  - { offset: 0x22397, size: 0x8, addend: 0x0, symName: _NET_ThrowByNameWithLastError, symObjAddr: 0x8, symBinAddr: 0x6288, symSize: 0x4 }
+  - { offset: 0x24BD5, size: 0x8, addend: 0x0, symName: _NET_ThrowNew, symObjAddr: 0xC, symBinAddr: 0x628C, symSize: 0x128 }
+  - { offset: 0x24CF4, size: 0x8, addend: 0x0, symName: _IPv4_supported, symObjAddr: 0x134, symBinAddr: 0x63B4, symSize: 0x38 }
+  - { offset: 0x24D79, size: 0x8, addend: 0x0, symName: _IPv6_supported, symObjAddr: 0x16C, symBinAddr: 0x63EC, symSize: 0x4C }
+  - { offset: 0x24E15, size: 0x8, addend: 0x0, symName: _reuseport_supported, symObjAddr: 0x1B8, symBinAddr: 0x6438, symSize: 0x7C }
+  - { offset: 0x24F01, size: 0x8, addend: 0x0, symName: _NET_ThrowUnknownHostExceptionWithGaiError, symObjAddr: 0x234, symBinAddr: 0x64B4, symSize: 0xF4 }
+  - { offset: 0x250C3, size: 0x8, addend: 0x0, symName: _NET_EnableFastTcpLoopback, symObjAddr: 0x328, symBinAddr: 0x65A8, symSize: 0x8 }
+  - { offset: 0x250EC, size: 0x8, addend: 0x0, symName: _NET_InetAddressToSockaddr, symObjAddr: 0x330, symBinAddr: 0x65B0, symSize: 0x1F8 }
+  - { offset: 0x252E1, size: 0x8, addend: 0x0, symName: _NET_IsIPv4Mapped, symObjAddr: 0x528, symBinAddr: 0x67A8, symSize: 0x78 }
+  - { offset: 0x2531C, size: 0x8, addend: 0x0, symName: _NET_IPv4MappedToIPv4, symObjAddr: 0x5A0, symBinAddr: 0x6820, symSize: 0xC }
+  - { offset: 0x25347, size: 0x8, addend: 0x0, symName: _NET_IsEqual, symObjAddr: 0x5AC, symBinAddr: 0x682C, symSize: 0x10C }
+  - { offset: 0x25390, size: 0x8, addend: 0x0, symName: _NET_IsZeroAddr, symObjAddr: 0x6B8, symBinAddr: 0x6938, symSize: 0x100 }
+  - { offset: 0x253CB, size: 0x8, addend: 0x0, symName: _NET_GetSockOpt, symObjAddr: 0x7B8, symBinAddr: 0x6A38, symSize: 0x70 }
+  - { offset: 0x25512, size: 0x8, addend: 0x0, symName: _NET_Bind, symObjAddr: 0x9FC, symBinAddr: 0x6C7C, symSize: 0x4 }
+  - { offset: 0x25566, size: 0x8, addend: 0x0, symName: _NET_Bind, symObjAddr: 0x9FC, symBinAddr: 0x6C7C, symSize: 0x4 }
+  - { offset: 0x255F7, size: 0x8, addend: 0x0, symName: _NET_Wait, symObjAddr: 0xA00, symBinAddr: 0x6C80, symSize: 0xF0 }
+  - { offset: 0x25935, size: 0x8, addend: 0x0, symName: _Java_sun_net_PortConfig_getLower0, symObjAddr: 0x0, symBinAddr: 0x6D70, symSize: 0x84 }
+  - { offset: 0x259F6, size: 0x8, addend: 0x0, symName: _Java_sun_net_PortConfig_getLower0, symObjAddr: 0x0, symBinAddr: 0x6D70, symSize: 0x84 }
+  - { offset: 0x25AF6, size: 0x8, addend: 0x0, symName: _Java_sun_net_PortConfig_getUpper0, symObjAddr: 0x84, symBinAddr: 0x6DF4, symSize: 0x84 }
+  - { offset: 0x28401, size: 0x8, addend: 0x0, symName: _initJavaClass, symObjAddr: 0x0, symBinAddr: 0x6E78, symSize: 0x1C8 }
+  - { offset: 0x28428, size: 0x8, addend: 0x0, symName: _proxy_class, symBinAddr: 0xC368, symSize: 0x0 }
+  - { offset: 0x2845D, size: 0x8, addend: 0x0, symName: _isaddr_class, symBinAddr: 0xC350, symSize: 0x0 }
+  - { offset: 0x28472, size: 0x8, addend: 0x0, symName: _ptype_class, symBinAddr: 0xC378, symSize: 0x0 }
+  - { offset: 0x28487, size: 0x8, addend: 0x0, symName: _isaddr_createUnresolvedID, symBinAddr: 0xC358, symSize: 0x0 }
+  - { offset: 0x284B1, size: 0x8, addend: 0x0, symName: _proxy_ctrID, symBinAddr: 0xC370, symSize: 0x0 }
+  - { offset: 0x284C6, size: 0x8, addend: 0x0, symName: _pr_no_proxyID, symBinAddr: 0xC360, symSize: 0x0 }
+  - { offset: 0x284F0, size: 0x8, addend: 0x0, symName: _ptype_httpID, symBinAddr: 0xC380, symSize: 0x0 }
+  - { offset: 0x28505, size: 0x8, addend: 0x0, symName: _ptype_socksID, symBinAddr: 0xC388, symSize: 0x0 }
+  - { offset: 0x2853B, size: 0x8, addend: 0x0, symName: _initJavaClass, symObjAddr: 0x0, symBinAddr: 0x6E78, symSize: 0x1C8 }
+  - { offset: 0x28658, size: 0x8, addend: 0x0, symName: _createProxy, symObjAddr: 0x1C8, symBinAddr: 0x7040, symSize: 0xC4 }
+...

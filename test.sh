@@ -1,87 +1,113 @@
 #!/bin/zsh
 
+############################
+# variables
+############################
+
+# main version
+jdk_main=./jdk/main
 # fixed version
-fixedVersion=21-internal+0-2025-02-04-102810
-# time to wait for results
-waitTime=12
+jdk_fix=./jdk/fix
 
+# main version
+jfx_main=25-internal+0-2025-04-15-211833
+# fixed version
+jfx_fix=25-internal+0-2025-04-15-211549
+
+# start awt before jfx
+mode_before=before
+# start awt after jfx
+mode_after=after
+
+# name of the app
+app_name=OpenUriFxApp
+# url prefix the app handles
+url_prefix=openurifx
+# file for the app output
+output_file=/tmp/"$app_name"-output.txt
+# file for the results
+result_file=./results.txt
+# time to sleep after killing the app
+kill_sleep_time=12
+# time to sleep after opening the app
+open_sleep_time=12
+# time to sleep after opening the url
+url_sleep_time=4
+
+############################
 # functions
-function check_result {
-  result=$(cat "/tmp/openurifx-output.txt")
-  if [[ $result == "uri-receive-count: 1, native-menu-bar: true" ]]; then
-    echo Success
-  else
-    echo Failure
-    echo "Expected: [uri-receive-count: 1, native-menu-bar: true], Actual: [$result]"
-  fi
-}
+############################
 
-function install_app {
-  #
-  # install faulty version
-  #
+# install the app
+install_app () {
+  # kill app, if already running
+  pkill "$app_name"
 
-  pkill OpenUriFxApp
+  # set java version
+  export JAVA_HOME="$1"
 
   # build dmg
-  # echo "Building and installing faulty version (this may take some time)..."
-  mvn clean install jpackage:jpackage -Djfx-graphics.version=21 > /dev/null
+  mvn clean install jpackage:jpackage -Djfx.version="$2" > /dev/null
 
   # install dmg
-  hdiutil attach ./target/dist/OpenUriFxApp-1.0.dmg > /dev/null
-  sudo cp -R /Volumes/OpenUriFxApp/OpenUriFxApp.app /Applications
-  hdiutil unmount /Volumes/OpenUriFxApp > /dev/null
-
-  # open app
-  open /Applications/OpenUriFxApp.app
-
-  sleep $waitTime
-  pkill OpenUriFxApp
-
-  echo ""
-  echo "Faulty version result:"
-  check_result
-
-  #
-  # install fixed version
-  #
-
-  # build dmg
-  # echo "Building and installing fixed version (this may take some time)..."
-  mvn clean install jpackage:jpackage -Djfx-graphics.version=$fixedVersion > /dev/null
-
-  # install dmg
-  hdiutil attach ./target/dist/OpenUriFxApp-1.0.dmg > /dev/null
-  sudo cp -R /Volumes/OpenUriFxApp/OpenUriFxApp.app /Applications
-  hdiutil unmount /Volumes/OpenUriFxApp > /dev/null
-
-  # open app
-  open /Applications/OpenUriFxApp.app
-
-  sleep $waitTime
-  pkill OpenUriFxApp
-
-  echo ""
-  echo "Fixed version result:"
-  check_result
+  hdiutil attach ./target/dist/"$app_name".dmg > /dev/null
+  sudo cp -R /Volumes/"$app_name"/"$app_name".app /Applications
+  hdiutil unmount /Volumes/"$app_name" > /dev/null
 }
 
-echo "Running test, this may take some time..."
+# open the app
+open_app () {
+  # kill app, if already running
+  pkill "$app_name"
+  sleep "$kill_sleep_time"
 
-echo "swing-first" > /tmp/openurifx-order.txt
-echo ""
-echo "Testing with initializing swing first"
-install_app
+  # set the mode env variable
+  export APP_MODE="$1"
 
-echo "before-show" > /tmp/openurifx-order.txt
-echo ""
-echo "Testing with initializing swing before show"
-install_app
+  # open the app with the mode argument
+  open /Applications/OpenUriFxApp.app
 
-echo "after-show" > /tmp/openurifx-order.txt
-echo ""
-echo "Testing with initializing swing after show"
-install_app
+  # wait, so app is really open
+  sleep "$open_sleep_time"
+}
 
-echo ""
-echo "Finished!"
+# test the app
+test_app () {
+  # trigger the open url event
+  open "$url_prefix"://test
+
+  # wait, so app has received the url and written the output
+  sleep "$url_sleep_time"
+
+  # print result
+  {
+    echo "Result for [jdk: '$1', jfx: '$2', mode: '$3']:";
+    cat "$output_file";
+    echo "";
+  } >> "$result_file"
+}
+
+############################
+# execution
+############################
+
+jdk_versions=("$jdk_main" "$jdk_fix")
+jfx_versions=("$jfx_main" "$jfx_fix")
+modes=("$mode_before" "$mode_after")
+
+rm "$result_file"
+
+for jdk_version in "${jdk_versions[@]}"; do
+  for jfx_version in "${jfx_versions[@]}"; do
+    echo "Installing app..."
+    install_app "$jdk_version" "$jfx_version"
+
+    for mode in "${modes[@]}"; do
+      echo "Opening app..."
+      open_app "$mode"
+
+      echo "Testing app..."
+      test_app "$jdk_version" "$jfx_version" "$mode"
+    done
+  done
+done

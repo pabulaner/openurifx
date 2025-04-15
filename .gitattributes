@@ -1,0 +1,5 @@
+jdk/fix/lib/modules filter=lfs diff=lfs merge=lfs -text
+jdk/fix/lib/server/libjvm.dylib.dSYM/Contents/Resources/DWARF/libjvm.dylib filter=lfs diff=lfs merge=lfs -text
+File[[:space:]]jdk/main/lib/server/libjvm.dylib.dSYM/Contents/Resources/DWARF/libjvm.dylib filter=lfs diff=lfs merge=lfs -text
+jdk/main/lib/modules filter=lfs diff=lfs merge=lfs -text
+jdk/main/lib/server/libjvm.dylib.dSYM/Contents/Resources/DWARF/libjvm.dylib filter=lfs diff=lfs merge=lfs -text

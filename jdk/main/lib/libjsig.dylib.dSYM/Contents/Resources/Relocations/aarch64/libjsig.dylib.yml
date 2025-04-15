@@ -1,0 +1,27 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/paul/Workspace/Java/jdk/build/macosx-aarch64-server-release/support/modules_libs/java.base/libjsig.dylib'
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _signal, symObjAddr: 0x0, symBinAddr: 0x36E0, symSize: 0x234 }
+  - { offset: 0x4D, size: 0x8, addend: 0x0, symName: _sact, symObjAddr: 0x3468, symBinAddr: 0x8108, symSize: 0x0 }
+  - { offset: 0x20D, size: 0x8, addend: 0x0, symName: _deprecated_usage, symObjAddr: 0x3669, symBinAddr: 0x8309, symSize: 0x0 }
+  - { offset: 0x235, size: 0x8, addend: 0x0, symName: _jvmsigs, symObjAddr: 0x3460, symBinAddr: 0x8100, symSize: 0x0 }
+  - { offset: 0x24A, size: 0x8, addend: 0x0, symName: _tid, symObjAddr: 0x3690, symBinAddr: 0x8330, symSize: 0x0 }
+  - { offset: 0x2F3, size: 0x8, addend: 0x0, symName: _os_signal, symObjAddr: 0x3698, symBinAddr: 0x8338, symSize: 0x0 }
+  - { offset: 0x333, size: 0x8, addend: 0x0, symName: _reentry, symObjAddr: 0x75D, symBinAddr: 0x80E0, symSize: 0x0 }
+  - { offset: 0x349, size: 0x8, addend: 0x0, symName: _os_sigaction, symObjAddr: 0x36A0, symBinAddr: 0x8340, symSize: 0x0 }
+  - { offset: 0x392, size: 0x8, addend: 0x0, symName: _mutex, symObjAddr: 0x7A8, symBinAddr: 0x80A0, symSize: 0x0 }
+  - { offset: 0x3EA, size: 0x8, addend: 0x0, symName: _jvm_signal_installed, symObjAddr: 0x3464, symBinAddr: 0x8104, symSize: 0x0 }
+  - { offset: 0x406, size: 0x8, addend: 0x0, symName: _jvm_signal_installing, symObjAddr: 0x3668, symBinAddr: 0x8308, symSize: 0x0 }
+  - { offset: 0x422, size: 0x8, addend: 0x0, symName: _warning_printed, symObjAddr: 0x36A8, symBinAddr: 0x8348, symSize: 0x0 }
+  - { offset: 0x43E, size: 0x8, addend: 0x0, symName: _cond, symObjAddr: 0x778, symBinAddr: 0x8070, symSize: 0x0 }
+  - { offset: 0x577, size: 0x8, addend: 0x0, symName: _signal, symObjAddr: 0x0, symBinAddr: 0x36E0, symSize: 0x234 }
+  - { offset: 0x7EE, size: 0x8, addend: 0x0, symName: _sigset, symObjAddr: 0x234, symBinAddr: 0x3914, symSize: 0x1C }
+  - { offset: 0x8C1, size: 0x8, addend: 0x0, symName: _sigset, symObjAddr: 0x234, symBinAddr: 0x3914, symSize: 0x1C }
+  - { offset: 0x909, size: 0x8, addend: 0x0, symName: _sigaction, symObjAddr: 0x250, symBinAddr: 0x3930, symSize: 0x2C0 }
+  - { offset: 0x95E, size: 0x8, addend: 0x0, symName: _sigaction, symObjAddr: 0x250, symBinAddr: 0x3930, symSize: 0x2C0 }
+  - { offset: 0xBF2, size: 0x8, addend: 0x0, symName: _JVM_begin_signal_setting, symObjAddr: 0x510, symBinAddr: 0x3BF0, symSize: 0x9C }
+  - { offset: 0xC02, size: 0x8, addend: 0x0, symName: _JVM_begin_signal_setting, symObjAddr: 0x510, symBinAddr: 0x3BF0, symSize: 0x9C }
+  - { offset: 0xCA5, size: 0x8, addend: 0x0, symName: _JVM_end_signal_setting, symObjAddr: 0x5AC, symBinAddr: 0x3C8C, symSize: 0xA0 }
+  - { offset: 0xD5A, size: 0x8, addend: 0x0, symName: _JVM_get_signal_action, symObjAddr: 0x64C, symBinAddr: 0x3D2C, symSize: 0x34 }
+...

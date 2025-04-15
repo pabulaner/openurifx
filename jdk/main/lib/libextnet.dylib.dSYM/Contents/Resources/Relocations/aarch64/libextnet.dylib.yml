@@ -1,0 +1,18 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/paul/Workspace/Java/jdk/build/macosx-aarch64-server-release/support/modules_libs/jdk.net/libextnet.dylib'
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_keepAliveOptionsSupported0, symObjAddr: 0x0, symBinAddr: 0x3654, symSize: 0x38 }
+  - { offset: 0xB6, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_keepAliveOptionsSupported0, symObjAddr: 0x0, symBinAddr: 0x3654, symSize: 0x38 }
+  - { offset: 0x12B, size: 0x8, addend: 0x0, symName: _socketOptionSupported, symObjAddr: 0x38, symBinAddr: 0x368C, symSize: 0xC8 }
+  - { offset: 0x2AF3, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_setTcpKeepAliveProbes0, symObjAddr: 0x100, symBinAddr: 0x3754, symSize: 0x88 }
+  - { offset: 0x2C01, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_setTcpKeepAliveTime0, symObjAddr: 0x188, symBinAddr: 0x37DC, symSize: 0x88 }
+  - { offset: 0x2CDF, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_setTcpKeepAliveIntvl0, symObjAddr: 0x210, symBinAddr: 0x3864, symSize: 0x88 }
+  - { offset: 0x2DBF, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_getTcpKeepAliveProbes0, symObjAddr: 0x298, symBinAddr: 0x38EC, symSize: 0x90 }
+  - { offset: 0x2EE8, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_getSoPeerCred0, symObjAddr: 0x328, symBinAddr: 0x397C, symSize: 0xA4 }
+  - { offset: 0x2FE4, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_getTcpKeepAliveTime0, symObjAddr: 0x3CC, symBinAddr: 0x3A20, symSize: 0x90 }
+  - { offset: 0x30D6, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_getTcpKeepAliveIntvl0, symObjAddr: 0x45C, symBinAddr: 0x3AB0, symSize: 0x90 }
+  - { offset: 0x31CA, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_ipDontFragmentSupported0, symObjAddr: 0x4EC, symBinAddr: 0x3B40, symSize: 0xC4 }
+  - { offset: 0x32D9, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_setIpDontFragment0, symObjAddr: 0x5B0, symBinAddr: 0x3C04, symSize: 0xA0 }
+  - { offset: 0x33C5, size: 0x8, addend: 0x0, symName: _Java_jdk_net_MacOSXSocketOptions_getIpDontFragment0, symObjAddr: 0x650, symBinAddr: 0x3CA4, symSize: 0xB4 }
+...
