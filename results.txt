@@ -1,0 +1,4 @@
+Result for [jdk: './jdk/main', jfx: 'main', mode: 'before']:
+menu: false, uri: 0
+Result for [jdk: './jdk/main', jfx: 'main', mode: 'after']:
+menu: true, uri: 1

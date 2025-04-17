@@ -1,7 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/paul/Workspace/Java/jdk/build/macosx-aarch64-server-release/support/modules_libs/jdk.security.auth/libjaas.dylib'
-relocations:
-  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _Java_com_sun_security_auth_module_UnixSystem_getUnixInfo, symObjAddr: 0x0, symBinAddr: 0x3AC0, symSize: 0x3C4 }
-  - { offset: 0x94, size: 0x8, addend: 0x0, symName: _Java_com_sun_security_auth_module_UnixSystem_getUnixInfo, symObjAddr: 0x0, symBinAddr: 0x3AC0, symSize: 0x3C4 }
-...

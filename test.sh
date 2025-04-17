@@ -10,9 +10,9 @@ jdk_main=./jdk/main
 jdk_fix=./jdk/fix
 
 # main version
-jfx_main=25-internal+0-2025-04-15-211833
+jfx_main=main
 # fixed version
-jfx_fix=25-internal+0-2025-04-15-211549
+jfx_fix=fix
 
 # start awt before jfx
 mode_before=before
